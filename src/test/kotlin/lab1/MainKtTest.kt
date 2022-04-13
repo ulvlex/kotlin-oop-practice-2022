@@ -13,14 +13,14 @@ internal class MainKtTest
 
         val bookList:List<Book> = parseBooks(books)
 
-        assertEquals(bookList[0]._name, "Солярис")
-        assertEquals(bookList[0]._authors, "Станислав Лем")
-        assertEquals(bookList[0]._pubDate, "1961")
-        assertEquals(bookList[1]._name, "Три сестры")
-        assertEquals(bookList[1]._authors, "Антон Чехов")
-        assertEquals(bookList[1]._pubDate, "1900")
-        assertEquals(bookList[2]._name, "С++ Primer")
-        assertEquals(bookList[2]._authors, "Стэнли Липпман, Жозе Лажуа и Барбара Э. Му")
-        assertEquals(bookList[2]._pubDate, "2012")
+        assertEquals(bookList[0].name, "Солярис")
+        assertEquals(bookList[0].authors, "Станислав Лем")
+        assertEquals(bookList[0].pubDate, "1961")
+        assertEquals(bookList[1].name, "Три сестры")
+        assertEquals(bookList[1].authors, "Антон Чехов")
+        assertEquals(bookList[1].pubDate, "1900")
+        assertEquals(bookList[2].name, "С++ Primer")
+        assertEquals(bookList[2].authors, "Стэнли Липпман, Жозе Лажуа и Барбара Э. Му")
+        assertEquals(bookList[2].pubDate, "2012")
     }
 }

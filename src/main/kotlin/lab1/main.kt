@@ -37,9 +37,9 @@ fun oldestBook(list: List<Book>){
     var curName = ""
 
     for (i in list) {
-        if (minDate > i._pubDate.toInt()) {
-            minDate = i._pubDate.toInt()
-            curName = i._name
+        if (minDate > i.pubDate.toInt()) {
+            minDate = i.pubDate.toInt()
+            curName = i.name
         }
     }
     println("The newest book is \"$curName\" of $minDate")
@@ -50,9 +50,9 @@ fun newestBook(list: List<Book>){
     var curName = ""
 
     for (i in list) {
-        if (maxDate < i._pubDate.toInt()) {
-            maxDate = i._pubDate.toInt()
-            curName = i._name
+        if (maxDate < i.pubDate.toInt()) {
+            maxDate = i.pubDate.toInt()
+            curName = i.name
         }
     }
     println("The oldest book is \"$curName\" of $maxDate")
@@ -63,9 +63,9 @@ fun longestTitle(list: List<Book>){
     var curName = ""
 
     for (i in list) {
-        if (maxLen < i._name.count()) {
-            maxLen = i._name.count()
-            curName = i._name
+        if (maxLen < i.name.count()) {
+            maxLen = i.name.count()
+            curName = i.name
         }
     }
     println("The longest title of the book \"$curName\"")
@@ -76,9 +76,9 @@ fun shortestTitle(list: List<Book>){
     var curName = ""
 
     for (i in list) {
-        if (minLen > i._name.count()) {
-            minLen = i._name.count()
-            curName = i._name
+        if (minLen > i.name.count()) {
+            minLen = i.name.count()
+            curName = i.name
         }
     }
     println("The shortest title of the book \"$curName\"")
