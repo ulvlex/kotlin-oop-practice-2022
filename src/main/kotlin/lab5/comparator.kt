@@ -2,8 +2,10 @@ package lab5
 
 import lab2.ColoredShape2d
 
-class AreaComparator : Comparator<ColoredShape2D> {
-    override fun compare(shape1: ColoredShape2D, shape2: ColoredShape2D): Int {
-        return if (shape1.area() == shape2.area()) 0 else if (shape1.area() > shape2.area()) 1 else -1
+class AreaComparator : Comparator<ColoredShape2d> {
+    override fun compare(shape1: ColoredShape2d, shape2: ColoredShape2d): Int {
+        return if (shape1.calcArea() == shape2.calcArea()) 0
+        else if (shape1.calcArea() > shape2.calcArea()) 1
+        else -1
     }
 }
