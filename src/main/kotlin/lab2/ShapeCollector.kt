@@ -7,20 +7,29 @@ class ShapeCollector {
         listFigure.add(figure)
     }
 
-    fun minAreaFromList(): Double {
+    fun minAreaFromList(): ColoredShape2d {
         var minArea = Double.MAX_VALUE
-        for (figure in listFigure) {
-            if (minArea > figure.calcArea()) minArea = figure.calcArea()
+        var num = 0
+        for ((index,figure) in listFigure.withIndex()) {
+            if (minArea < figure.calcArea()) {
+                minArea = figure.calcArea()
+                num = index
+            }
         }
-        return minArea
+        return listFigure[num]
     }
 
-    fun maxAreaFromList(): Double {
+    fun maxAreaFromList(): ColoredShape2d {
         var maxArea: Double = 0.0
-        for (figure in listFigure) {
-            if (maxArea < figure.calcArea()) maxArea = figure.calcArea()
+        var num = 0
+        for ((index,figure) in listFigure.withIndex()) {
+            if (maxArea < figure.calcArea()) {
+                maxArea = figure.calcArea()
+                num = index
+            }
         }
-        return maxArea
+
+        return listFigure[num]
     }
 
     fun totalArea(): Double {
@@ -61,12 +70,8 @@ class ShapeCollector {
         return listFigure.groupBy { it.fillColor }
     }
 
-    fun shapesOfCertainType(type: String): List<ColoredShape2d> {
-        val listFigureType: MutableList<ColoredShape2d> = mutableListOf()
-        for (figure in listFigure) {
-            if (figure.javaClass.name.substringBefore('(').substringAfter('.') == type) listFigureType.add(figure)
-        }
-        return listFigureType
+    fun shapesOfCertainType(shapeClass: Class<out ColoredShape2d>): List<ColoredShape2d> {
+        return listFigure.filterIsInstance(shapeClass)
     }
 
     fun getFigure(index: Int): ColoredShape2d {

@@ -38,5 +38,5 @@ fun main() {
     println("Desired shapes by fill color = ${shapeCollector.findByFillColor(secondColor)}")
     println("Shapes grouped by border color = ${shapeCollector.groupedByBorderColor()}")
     println("Shapes grouped by fill color = ${shapeCollector.groupedByFillColor()}")
-    println("Shapes of a certain type = ${shapeCollector.shapesOfCertainType("Circle")}")
+    println("Shapes of a certain type = ${shapeCollector.shapesOfCertainType(Triangle::class.java)}")
 }

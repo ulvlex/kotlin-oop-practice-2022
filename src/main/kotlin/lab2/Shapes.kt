@@ -12,6 +12,10 @@ data class Circle(
         if (radius <= 0) throw IllegalArgumentException("Radius should be positive")
         return PI * radius * radius
     }
+
+    fun getProperties(): String {
+        return "Radius = $radius, borderColor = $borderColor, fillColor = $fillColor"
+    }
 }
 
 data class Square(
@@ -22,6 +26,10 @@ data class Square(
     override fun calcArea(): Double {
         if (side <= 0) throw IllegalArgumentException("Radius should be positive")
         return side * side
+    }
+
+    fun getProperties(): String {
+        return "Side = $side, borderColor = $borderColor, fillColor = $fillColor"
     }
 }
 
@@ -34,6 +42,10 @@ data class Rectangle(
     override fun calcArea(): Double {
         if (firstSide <= 0 || secondSide <= 0) throw IllegalArgumentException("Sides should be positive")
         return firstSide * secondSide
+    }
+
+    fun getProperties(): String {
+        return "FirstSide = $firstSide, secondSide = $secondSide, borderColor = $borderColor, fillColor = $fillColor"
     }
 }
 
@@ -53,6 +65,10 @@ data class Triangle(
             thirdSide + secondSide < firstSide
         ) throw IllegalArgumentException("There is no such triangle")
         return sqrt(halfMeter * (halfMeter - firstSide) * (halfMeter - secondSide) * (halfMeter - thirdSide))
+    }
+
+    fun getProperties(): String {
+        return "FirstSide = $firstSide, secondSide = $secondSide, thirdSide = $thirdSide, borderColor = $borderColor, fillColor = $fillColor"
     }
 }
 

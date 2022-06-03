@@ -11,7 +11,7 @@ internal class ShapeCollectorTest {
         val shape1 = Circle(3.0, color1, color1)
         val shape2 = Triangle( 2.0, 3.0, 4.0, color1, color1 )
 
-        val shapeCollector = ShapeCollector()
+        val shapeCollector = ShapeCollector<Any>()
         shapeCollector.addFigure(shape1)
         shapeCollector.addFigure(shape2)
 
@@ -25,7 +25,7 @@ internal class ShapeCollectorTest {
         val shape1 = Rectangle(3.0, 5.0, color1, color1)
         val shape2 = Rectangle( 2.0, 3.0, color1, color1 )
 
-        val shapeCollector = ShapeCollector()
+        val shapeCollector = ShapeCollector<Any>()
         shapeCollector.addFigure(shape1)
         shapeCollector.addFigure(shape2)
 
@@ -38,7 +38,7 @@ internal class ShapeCollectorTest {
         val shape1 = Rectangle(3.0, 5.0, color1, color1)
         val shape2 = Rectangle( 2.0, 3.0, color1, color1 )
 
-        val shapeCollector = ShapeCollector()
+        val shapeCollector = ShapeCollector<Any>()
         shapeCollector.addFigure(shape1)
         shapeCollector.addFigure(shape2)
 
@@ -51,7 +51,7 @@ internal class ShapeCollectorTest {
         val shape1 = Rectangle(3.0, 5.0, color1, color1)
         val shape2 = Rectangle( 2.0, 3.0, color1, color1 )
 
-        val shapeCollector = ShapeCollector()
+        val shapeCollector = ShapeCollector<Any>()
         shapeCollector.addFigure(shape1)
         shapeCollector.addFigure(shape2)
 
@@ -67,7 +67,7 @@ internal class ShapeCollectorTest {
         val shape2 = Triangle( 2.0, 3.0, 4.0, color2, color2 )
         val shape3 = Circle(6.0, color1, color2)
 
-        val shapeCollector = ShapeCollector()
+        val shapeCollector = ShapeCollector<Any>()
         shapeCollector.addFigure(shape1)
         shapeCollector.addFigure(shape2)
         shapeCollector.addFigure(shape3)
@@ -84,7 +84,7 @@ internal class ShapeCollectorTest {
         val shape2 = Triangle( 2.0, 3.0, 4.0, color2, color2 )
         val shape3 = Circle(6.0, color1, color2)
 
-        val shapeCollector = ShapeCollector()
+        val shapeCollector = ShapeCollector<Any>()
         shapeCollector.addFigure(shape1)
         shapeCollector.addFigure(shape2)
         shapeCollector.addFigure(shape3)
@@ -98,7 +98,7 @@ internal class ShapeCollectorTest {
         val shape1 = Circle(3.0, color1, color1)
         val shape2 = Triangle( 2.0, 3.0, 4.0, color1, color1 )
 
-        val shapeCollector = ShapeCollector()
+        val shapeCollector = ShapeCollector<Any>()
         shapeCollector.addFigure(shape1)
         shapeCollector.addFigure(shape2)
 
@@ -111,7 +111,7 @@ internal class ShapeCollectorTest {
         val shape1 = Circle(3.0, color1, color1)
         val shape2 = Triangle( 2.0, 3.0, 4.0, color1, color1 )
 
-        val shapeCollector = ShapeCollector()
+        val shapeCollector = ShapeCollector<Any>()
         shapeCollector.addFigure(shape1)
         shapeCollector.addFigure(shape2)
 
@@ -127,7 +127,7 @@ internal class ShapeCollectorTest {
         val shape2 = Triangle( 2.0, 3.0, 4.0, color2, color2 )
         val shape3 = Circle(6.0, color1, color2)
 
-        val shapeCollector = ShapeCollector()
+        val shapeCollector = ShapeCollector<Any>()
         shapeCollector.addFigure(shape1)
         shapeCollector.addFigure(shape2)
         shapeCollector.addFigure(shape3)
@@ -144,7 +144,7 @@ internal class ShapeCollectorTest {
         val shape2 = Triangle( 2.0, 3.0, 4.0, color2, color2 )
         val shape3 = Circle(6.0, color1, color2)
 
-        val shapeCollector = ShapeCollector()
+        val shapeCollector = ShapeCollector<Any>()
         shapeCollector.addFigure(shape1)
         shapeCollector.addFigure(shape2)
         shapeCollector.addFigure(shape3)
