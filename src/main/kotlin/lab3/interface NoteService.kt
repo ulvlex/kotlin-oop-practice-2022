@@ -15,7 +15,7 @@ interface NoteService {
     fun getSortedByTitle(): List<Note>
     fun getSortedByDate(): List<Note>
 
-    fun removeNote(title: String)
+    fun removeNote(note: Note)
 
     fun findByType(type: String): List<Note>
     fun findByTitle(title: String): List<Note>

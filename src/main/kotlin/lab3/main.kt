@@ -21,5 +21,8 @@ fun main(){
     println("Notes found by title (Thoughts): ${work.findByTitle("Thoughts")}")
     println("Notes found by type (Task): ${work.findByType("Task")}")
 
-    work.removeNote("Thoughts")
+    work.removeNote(work[0])
+
+    println("Note without first note: ")
+    println("${work.getAllNotes()}")
 }
