@@ -32,8 +32,8 @@ enum class Cell(private val textMaze: String) {
 
 @Serializable
 class Model(private val mazeMap: MutableList<MutableList<Cell>>) {
-    var state: State
-    var breakFlag = false
+    internal var state: State
+    internal var breakFlag = false
     private var x: Int
     private var y: Int
 
@@ -43,12 +43,6 @@ class Model(private val mazeMap: MutableList<MutableList<Cell>>) {
         x = -1
         y = -1
 
-        println(
-            "Welcome to the maze, you are standing on the P cell, " +
-                    "to win you need to get to the E cell. \nIf you want to exit the game, " +
-                    "press b, if you want to save the changes, press e. " +
-                    "\nTo move, press w,a,s,d. \nGood luck."
-        )
 
         for (indexF in 0 until mazeMap.size) {
             for (indexS in 0 until mazeMap[0].size) {
@@ -71,9 +65,11 @@ class Model(private val mazeMap: MutableList<MutableList<Cell>>) {
     fun removeModelChangeListener(listener: ModelChangeListener) = listeners.remove(listener)
 
     //Work
-    constructor(fileName: String) : this(ModelSerialization.deserializationFromFile(fileName))
+   // constructor(fileName: String) : this(ModelSerialization.deserializationFromFile(fileName))
 
-    fun writeMazeToFile(fileName: String) = ModelSerialization.serializationToFile(mazeMap, fileName)
+    //fun writeMazeToFile(fileName: String) = ModelSerialization.serializationToFile(mazeMap, fileName)
+
+    fun getModel() = mazeMap.toList()
 
     fun doMove(currMove: Actions) {
         require(state == State.WAIT_MOVE) { "Game was finished" }

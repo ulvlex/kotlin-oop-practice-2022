@@ -8,19 +8,20 @@ import java.io.File
 object ModelSerialization {
     private val json = Json
 
-    private fun serialization(maze: MutableList<MutableList<Cell>>) = json.encodeToString(maze)
+    private fun serialization(maze: List<List<Cell>>) = json.encodeToString(maze)
 
     private fun deserialization(stringToDecoder: String) =
-        json.decodeFromString<MutableList<MutableList<Cell>>>(stringToDecoder)
+        json.decodeFromString<List<List<Cell>>>(stringToDecoder)
 
-    fun serializationToFile(maze: MutableList<MutableList<Cell>>, fileName: String) {
+    fun serializationToFile(maze: List<List<Cell>>, fileName: String) {
         File(fileName).writeText(serialization(maze))
     }
 
-    fun deserializationFromFile(fileName: String): MutableList<MutableList<Cell>> {
+    fun deserializationFromFile(fileName: String): Model {
         val file = File(fileName)
         if (!file.exists())
             throw IllegalArgumentException("File can't be found")
-        return deserialization(file.readText())
+
+        return Model(deserialization(file.readText()) as MutableList<MutableList<Cell>>)
     }
 }

@@ -1,5 +1,7 @@
 package lab4
 
+import lab4.ModelSerialization.serializationToFile
+
 class Controller(private val model: Model) {
     init {
         newGame()
@@ -20,7 +22,8 @@ class Controller(private val model: Model) {
                         'e', 'у' -> {
                             println("File to save progress: ")
                             val fileName = readln()
-                            model.writeMazeToFile(fileName)
+                            serializationToFile(model.getModel(), fileName)
+                       //     model.writeMazeToFile(fileName)
                             saveGame = true
                             break
                         }
